@@ -1,0 +1,312 @@
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+* {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+.text-muted {
+  color: rgb(128, 127, 127) !important;
+}
+
+body {
+  background-color: rgb(245, 245, 245);
+}
+
+.subheader-text {
+  font-size: 14px;
+  color: rgb(43, 43, 43);
+}
+
+.nw-font {
+  font-family: "Arvo", sans-serif;
+  letter-spacing: -0.07em;
+}
+
+.header-font {
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+#featured-stories,
+#content-group-1,
+#content-group-2 {
+  margin-top: 0.7rem;
+}
+
+/* PADDINGS AND MARGINS AND BORDERS */
+
+/* MOST IMPORTANT, PADDING FOR MAIN ELEMENT SMAKES EVERYTHING ALIGNED */
+.base-pad {
+  padding: 0 1.8rem 0 1.8rem;
+}
+/* *************************************** */
+.noborder {
+  border: none;
+}
+
+/* for some reason, border-top could nto be written and function like border-bottom. border-top must be used with noborder for the desired effect */
+.border-top {
+  border-bottom: 0 none;
+  border-left: 0 none;
+  border-right: 0 none;
+}
+
+.border-bottom {
+  border-top: 0 none;
+  border-left: 0 none;
+  border-right: 0 none;
+}
+
+.content-padding {
+  padding: 0.7rem 0 0.7rem 0;
+  text-align: justify;
+  width: 800px;
+}
+.img-margin {
+  margin-right: 0.8rem;
+}
+.section-padding {
+  padding-top: 2rem;
+}
+
+/* STICKY SIDEBARS */
+
+#content-group-2,
+#featured-stories {
+  align-self: start;
+}
+
+/* HEADER STYLING */
+
+header {
+  background-color: white;
+  margin: 0 auto;
+  width: var(--content-width);
+}
+
+header h1 {
+  line-height: 45px;
+  font-size: 80px;
+  padding: 10px 30px 0 90px;
+}
+
+#homepage-date {
+  letter-spacing: -1px;
+}
+
+.heading-container {
+  position: relative;
+  min-height: 110px;
+}
+
+.heading {
+  width: 100%;
+  position: absolute;
+  top: 20px;
+  color: white;
+}
+
+header .buttons {
+  min-width: 200px;
+}
+
+header button {
+  border-radius: 20px !important;
+  padding: 3px;
+  border: none;
+  min-width: 130px;
+  background-color: white;
+}
+
+/* NAVIGATION */
+
+#nav-1 .links,
+#nav-2 {
+  background-color: rgb(255, 255, 255);
+  padding: 0.6em 1.6rem 0.6em 1.6rem;
+}
+
+.trapezoid {
+  position: absolute;
+  top: -15px;
+  border-bottom: 45px solid white;
+  border-right: 50px solid transparent;
+  height: 0;
+  width: 98%;
+}
+
+/* because trapezoid height is set to 0 */
+#nav-1 {
+  min-height: 2rem;
+}
+
+#nav-2 a:first-child {
+  color: black;
+}
+
+#nav-2 a {
+  text-transform: uppercase;
+  padding-right: 1%;
+  color: grey;
+}
+
+#nav-1 a:hover,
+#nav-2 a:hover {
+  color: red;
+}
+
+/* #VS CIRCLE */
+
+#vs-icon {
+  position: absolute;
+  top: 0px;
+  left: 47%;
+  height: 30px;
+  width: 30px;
+  background-color: black;
+}
+
+#vs-icon p {
+  position: absolute;
+  color: white;
+  font-size: 15px;
+  top: 4px;
+  left: 5px;
+}
+/* 
+-------------------- */
+
+/* The debate */
+
+#the-debate p {
+  /* border: 1px blue solid; */
+  font-size: 15px;
+  font-weight: 600;
+  color: rgb(83, 83, 83);
+}
+
+#the-debate p:first-child {
+  color: black;
+}
+
+#the-debate li {
+  border-width: 4px !important;
+}
+
+#opinion img,
+#the-debate img {
+  max-height: 80px;
+}
+#more-stories img,
+#latest-news img {
+  max-height: 100px;
+}
+
+#more-stories,
+#latest-news {
+  font-size: 14px;
+}
+
+.editions,
+footer .links {
+  color: rgb(92, 92, 92);
+  font-size: 15px;
+}
+
+footer .nw-font {
+  font-size: 45px;
+  color: red;
+}
+
+#copyright {
+  font-size: 12px;
+  padding-left: 1rem;
+}
+
+@media only screen and (max-width: 992px) {
+  .base-pad {
+    padding: 0 1rem 0 1rem;
+  }
+
+  :root {
+    --content-width: 100%;
+  }
+  .heading-container {
+    min-height: 50px;
+  }
+
+  .heading {
+    top: 0;
+    min-height: 43px;
+  }
+
+  .heading h1 {
+    line-height: 22px;
+    font-size: 28px;
+    padding: 0;
+  }
+
+  #homepage-date,
+  #nav-1,
+  #nav-2 {
+    display: none;
+    visibility: hidden;
+  }
+
+  #content-group-2,
+  #featured-stories {
+    position: static;
+  }
+
+  /* add padding to mid column */
+  #content-group-1 {
+    padding: 0 1rem 0 1rem !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .side-img {
+    min-width: 230px;
+  }
+
+  #my-turn img,
+  #culture-travel img {
+    min-width: 100%;
+  }
+}
+.col {
+  width: 100%;
+  float: left;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.rightchild {
+  margin-top: 40px;
+  background-color: white;
+  color: rgb(128, 127, 127);
+  height: 730px;
+  width: 490px;
+  border-radius: 3%;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.standings {
+  border-spacing: 7px;
+  border-collapse: separate;
+  margin-bottom: 50px;
+}
+.ad {
+  margin-top: 50px;
+  width: 100%;
+}
+.highlights {
+  margin-bottom: 50px;
+  width: 100%;
+}

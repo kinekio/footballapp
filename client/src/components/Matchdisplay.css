@@ -1,0 +1,38 @@
+#tickets {
+  width: 500px;
+  position: relative;
+  margin: 20px auto;
+  box-shadow: 4px 0 60px -30px #000;
+  border-radius: 10px;
+}
+.ticket {
+  width: 500px;
+  height: 140px;
+  background: #fff;
+  border: 5px solid #e8ebf0;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.ticket-container {
+  position: relative;
+  overflow: hidden;
+}
+.matchtime {
+  margin: 3px;
+  color: rgb(92, 92, 92);
+  font-size: 14px;
+  font-weight: bold;
+}
+.teams {
+  text-align: center;
+}
+.status {
+  border-radius: 3px;
+  text-align: center;
+  position: relative;
+  bottom: 0px;
+  color: #fff;
+}
+.score {
+  text-align: center;
+}

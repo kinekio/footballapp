@@ -1,0 +1,8 @@
+.fixturewindow {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #e1e6e2;
+}
+.fixturewindow > * {
+  flex: 1 1;
+}
