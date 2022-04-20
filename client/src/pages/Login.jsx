@@ -6,6 +6,7 @@ import { selectUser } from "../features/userSlice";
 import React, { useState } from "react";
 import { useHistory } from "react-router";
 import "./login.css";
+import Facebook from "../components/Facebook";
 
 
 export default function Login() {
@@ -51,11 +52,23 @@ export default function Login() {
       }
       });
       
+      
 }
+function call(){
+  window.FB.api(
+    '/me',
+    'GET',
+    {"fields":"id,name"},
+    function(response) {
+        console.log(response)
+    }
+  );}
 
   return (
       <div>
-      <Loginhead/>
+       
+ <Loginhead/>
+      
     <div className="Login">
       <form onSubmit={handleSubmit}>
         <div className="form-group" size="lg" controlId="email">
@@ -80,8 +93,12 @@ export default function Login() {
         <button block size="lg" type="submit" disabled={!validateForm()}>
           Login
         </button>
+        
       </form>
+      <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
     </div>
+    <button onclick={call()}>Click me</button>
+    <Facebook/>
     </div>
   );
 }
